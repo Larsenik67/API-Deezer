@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 80%;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#search {
+    width: 100%;
+    height: 30px;
+    font-size: large;
+    background-color: rgba(121, 162, 216, 0.3);
+}
+
+button {
+    height: 30px;
+    width: 15%;
+    margin-top: 1em;
+    background-color: black;
+    color: white;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.nomArtiste{
+    margin: 0;
+}
+
+.artiste {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1em;
+    flex:1;
+}
+
+.album {
+    display: flex;
+    flex:4;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  table td, table th {
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+    padding: 0.5em;
+  }
+
+  table tr:nth-child(odd){background-color: #f2f2f2;}
+  table tr:hover {background-color: #ddd;}
+  
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: white;
+  }
+  .titre{
+      text-align: left;
+  }
