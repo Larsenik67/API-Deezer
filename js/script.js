@@ -9,12 +9,13 @@ function album(id){
         success: function(data) {
 
             let albumlist = data.data
+            albumlist = albumlist.sort((a,b) => new moment(a.release_date).format('DDMMYYYY') - new moment(b.release_date).format('DDMMYYYY'))
             
             document.getElementById('albums').innerHTML = ""
 
             $("#albums").html(
                 albumlist.forEach(element => {
-                    document.getElementById('albums').innerHTML += "<tr><td><img src='" + element.cover_small + "' alt='" + element.title + "'></td><td class='titre'>" + element.title + "</td><td>" + element.release_date + "</td></tr>"})
+                    document.getElementById('albums').innerHTML += "<tr><td><img src='" + element.cover_small + "' alt='" + element.title + "'></td><td class='titre'>" + element.title + "</td><td>" + moment(element.release_date).format('DD/MM/YYYY') + "</td></tr>"})
             )
         }
     });
