@@ -9,7 +9,7 @@ function album(id){
         success: function(data) {
 
             let albumlist = data.data
-            albumlist = albumlist.sort((a,b) => new moment(a.release_date).format('DDMMYYYY') - new moment(b.release_date).format('DDMMYYYY'))
+            albumlist = albumlist.sort((a,b) => new moment(a.release_date).format('YYYYMMDD') - new moment(b.release_date).format('YYYYMMDD'))
             
             document.getElementById('albums').innerHTML = ""
 
